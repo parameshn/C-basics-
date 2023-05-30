@@ -30,7 +30,7 @@ printf() requests the data from the user, and the scanf() gets the data that the
 prints it on screen in order to show what was entered */
 
 #include <stdio.h>
-void main()
+main()
 {
     // Set up the variables that scanf will fill
     char firstInitial;
@@ -39,10 +39,12 @@ void main()
     int favourite_number;
 
     printf("What letter does your first name ends with?\n");
-    scanf("%c", &firstInitial);
+    scanf(" %c", &firstInitial);
 
     printf("what letter does your last name ends with\n");
-    scanf("%c", &lastInitial);
+    scanf(" %c", &lastInitial);
+    /*Use a space before %c to consume leading whitespace characters, including the newline character, when reading a single character.
+For other format specifiers (%d, %f, %s, etc.), the space before them is not needed as they already skip leading whitespace characters.*/
 
     printf("how old are you\n");
     scanf("%d", &age);
@@ -53,6 +55,8 @@ void main()
     printf("\nyour intials are %c.%c. and your %d years old", firstInitial, lastInitial, age);
 
     printf("\nyour favourite number is %d.\n\n", favourite_number);
+
+    return 0;
 }
 /*ampersand = &
 
