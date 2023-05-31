@@ -2,7 +2,7 @@
 
 /* This is a sample program that asks users for some basic data and prints it on
 screen in order to show what was entered */
-main()
+int main()
 {
     char topping[24];
     int slices;
